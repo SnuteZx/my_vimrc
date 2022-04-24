@@ -24,6 +24,9 @@ set ruler
 set showcmd
 set relativenumber
 set nowrapscan
+noremap j (v:count == 0 ? 'gj' : 'j')
+noremap k (v:count == 0 ? 'gk' : 'k')
+
 augroup relativenumber
     auto!
     autocmd InsertLeave * : set relativenumber
